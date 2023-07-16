@@ -1,6 +1,7 @@
 import './App.css';
 import { createBrowserRouter } from 'react-router-dom';
 import ContactList from './views/contact_list';
+import ContactForm from './views/form';
 import React from 'react';
 import {RouterProvider} from 'react-router-dom'
 
@@ -16,7 +17,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/form",
-    element: <div>Hola soy form!</div>
+    element: <ContactForm />
   }
 ])
 

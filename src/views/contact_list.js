@@ -7,7 +7,7 @@ import { Image } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import {useSelector, useDispatch} from 'react-redux'
 import { addContact, deleteContact, getContacts } from "../redux/contactsSlice";
-
+import { Link } from "react-router-dom";
 
 function ContactList() {
     const contacts = useSelector((store)=>{
@@ -86,7 +86,7 @@ function ContactList() {
     return(
         <Container>
             <Container>
-                <Button variant="success" onClick={()=>dispatch(addContact())}>Add new contact</Button>
+                <Button variant="success"><Link to={'/form'}>Add new contact</Link></Button>
             </Container>
             <Container>
                 {renderContacts()}

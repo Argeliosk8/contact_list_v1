@@ -11,17 +11,11 @@ export const contactsSlice = createSlice({
         ]
     },
     reducers: {
-        addContact: (state)=>{
-            state.contacts.push(
-                {
-                    name: "Jordan Andres",
-                    address: "Managua",
-                    phone: "477-888-9999",
-                    email: "test@gmail.com",
-                    id: 2
-                }
-            )
+        addContact: (state, action)=>{
+            const newcontact = action.payload
+            state.contacts.push(newcontact)
         },
+
         deleteContact: (state, action)=>{
         
             const newContactId = action.payload
